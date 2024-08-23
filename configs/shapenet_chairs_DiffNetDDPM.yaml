@@ -1,0 +1,70 @@
+epochs: 400
+lr: 1e-4
+lr_warmup_steps: 500
+num_train_timesteps: 1000
+
+data:
+  root: /data2/ShapeNetCore
+  category: '03001627'  # car=02958343, chair=03001627, sofa=04256520, plane=02691156 
+  num_workers: 12
+  batch_size: 4
+  pad: False
+  filter_files_with: 
+    - a_texture
+    - less_50k_verts
+  pre_transforms_list: 
+    - normalise_scale
+    - normals
+    - sample_everything_poisson
+    - laplacian_eigendecomposition
+    - drop_trimesh
+    - drop_laplacian
+    - drop_edges
+    - drop_faces
+    - scale_invariant_hks  # not used if 'hks_number' not provided 
+  transforms_list: None 
+  transforms_config:
+    mix_laplacian_w: 1
+    lapl_as_cloud: True
+    lapl_on_verts: False
+    eigen_number: 128
+    eigen_eps: 1e-8
+    eigen_timeout_seconds: 300
+    hks_number: 32
+    store_lapl: True
+    store_massvec: True
+    n_poisson_samples: 5_000
+    resize_texture: True
+    sample_evecs_mass: False
+
+net:
+  channels:
+    net_in: 3
+    net_out: 3
+    blocks_mlp_io: 256
+    blocks_mlp_intermediate: None
+    attention: None
+  blocks_depth: 5  # Total blocks = 1 + 2 * blocks_depth 
+  last_activation: None
+  dropout: True
+  time_frequency_shift: 0
+  time_flip_sin_to_cos: True
+
+log_frequency:
+  save_checkpoint: 10
+  log_renderings: 25
+
+rendering:
+  camera:
+    distance: 3.3
+    azimuth_deg: 140
+    elevation_deg: 40
+    camera_type: perspective                 # in [perspective, orthographic]
+    img_width: 512
+    img_height: 512
+    sampler_type: multijitter                # in [multijitter, independent]
+    sample_count: 16
+    fov: 40
+  emitter:
+    envmap_path: None                        # use ambient light if no envmap
+  twosided: True

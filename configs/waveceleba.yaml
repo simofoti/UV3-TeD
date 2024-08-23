@@ -1,0 +1,66 @@
+epochs: 50
+lr: 5e-4
+lr_warmup_steps: 5000
+num_train_timesteps: 1000
+
+data:
+  root: /data2/img_align_celeba
+  num_workers: 12
+  batch_size: 4
+  pad: False
+  pre_transforms_list: 
+    - normals
+    - normalise_scale
+    - laplacian_eigendecomposition
+  transforms_list:
+    - sample_everything_poisson
+    - sample_farthest
+    - scale_invariant_hks  # not used if 'hks_number' not provided 
+    - drop_trimesh
+    - drop_laplacian
+    - drop_edges
+    - drop_faces
+  transforms_config:
+    mix_laplacian_w: 0.05
+    lapl_as_cloud: False
+    eigen_number: 128
+    eigen_eps: 1e-8
+    eigen_timeout_seconds: 300
+    hks_number: 32
+    store_lapl: True
+    store_massvec: True
+    n_poisson_samples: 5_000
+    n_farthest_samples: 200
+    resize_texture: True
+
+net:
+  channels:
+    net_in: 3
+    net_out: 3
+    blocks_mlp_io: 256
+    blocks_mlp_intermediate: None
+    attention: 64
+  blocks_depth: 5  # Total blocks = 1 + 2 * blocks_depth 
+  last_activation: None
+  dropout: True
+  time_frequency_shift: 0
+  time_flip_sin_to_cos: True
+
+log_frequency:
+  save_checkpoint: 2
+  log_renderings: 1
+
+rendering:
+  camera:
+    distance: 3.0
+    azimuth_deg: 150
+    elevation_deg: 30
+    camera_type: perspective                 # in [perspective, orthographic]
+    img_width: 512
+    img_height: 512
+    sampler_type: multijitter                # in [multijitter, independent]
+    sample_count: 16
+    fov: 40
+  emitter:
+    envmap_path: None                        # use ambient light if no envmap
+  twosided: True
