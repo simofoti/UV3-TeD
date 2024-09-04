@@ -7,9 +7,8 @@ This repository provides the official implementation of UV3-TeD:
 Imperial College London
 
 
-<video width="1024" height="576" controls>
-  <source src="https://github.com/simofoti/UV3-TeD/blob/main/assets/teaser_video.mp4" type="video/mp4">
-</video>
+<video src="https://github.com/simofoti/UV3-TeD/blob/main/assets/teaser_video.mp4" width="320" height="240" controls></video>
+
 
 ## Installation
 
