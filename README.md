@@ -6,8 +6,7 @@ This repository provides the official implementation of UV3-TeD:
 [Simone Foti](https://www.simofoti.com/), [Stefanos Zafeiriou](https://scholar.google.com/citations?user=QKOH5iYAAAAJ&hl=en), [Tolga Birdal](http://tolgabirdal.github.io/)\
 Imperial College London
 
-![](/assets/teaser_video.mp4)
-
+![](https://youtu.be/003deH1D3pw)
 
 ## Installation
 
