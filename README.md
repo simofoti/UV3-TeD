@@ -1,5 +1,17 @@
 # *Uv*-free Mesh Texture Generation with Denoising and Heat Diffusion
 
+This repository provides the official implementation of UV3-TeD:
+
+### [UV-free Texture Generation with Denoising and Geodesic Heat Diffusions](https://arxiv.org/abs/2408.16762)
+[Simone Foti](https://www.simofoti.com/), [Stefanos Zafeiriou](https://scholar.google.com/citations?user=QKOH5iYAAAAJ&hl=en), [Tolga Birdal](http://tolgabirdal.github.io/)\
+Imperial College London
+
+```[![Watch the video](assets/teaser_video.png)](assets/teaser_video.mp4)
+
+<video width="1024" height="576" controls>
+  <source src="assets/teaser_video.mp4" type="video/mp4">
+</video>
+
 ## Installation
 
 We suggest creating a mamba environment, but conda can be used as well by simply 
