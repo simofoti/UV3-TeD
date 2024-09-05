@@ -1,4 +1,4 @@
-# *Uv*-free Mesh Texture Generation with Denoising and Heat Diffusion
+# *UV*-free Mesh Texture Generation with Denoising and Heat Diffusion
 
 This repository provides the official implementation of UV3-TeD:
 
@@ -8,6 +8,9 @@ Imperial College London
 
 [![UV3-TeD](assets/uv3ted.jpg)](https://youtu.be/003deH1D3pw?feature=shared)
 
+[![arXiv](https://img.shields.io/badge/arXiv-2408.16762-b31b1b.svg)](https://arxiv.org/abs/2408.16762)
+[![Website](https://img.shields.io/website?url=http://uv3ted.github.io/?style=flat&logo=github&label=project%20page)](http://uv3ted.github.io/)
+[![Website](https://img.shields.io/website?url=https://www.dropbox.com/scl/fi/ymlh4so3y0gkmfn50mm6u/weights.zip?rlkey=ivhnbrgpyzfs1o57775ast5ov&st=ns7oubjc&dl=0?style=flat&logo=dropbox&label=pretrained%20models)](https://www.dropbox.com/scl/fi/ymlh4so3y0gkmfn50mm6u/weights.zip?rlkey=ivhnbrgpyzfs1o57775ast5ov&st=ns7oubjc&dl=0 )
 
 ## Installation
 
@@ -47,7 +50,7 @@ pip install clean-fid lpips
 
 ## Datasets
 
-Installation instructions should be automatically printed when launching the 
+Download instructions should be automatically printed when launching the 
 code if data are not found or automatic download is not implemented. 
 
 Permissions to download the data may be required. Please, refer to the 
@@ -110,3 +113,5 @@ Then run:
 python lpips_2dirs.py -d0 <PATH_TO_A_DIR_CONTAINING_A_SET_OF_RENDERED_SHAPES> -d1 <PATH_TO_ANOTHER_DIR_CONTAINING_A_SET_OF_RENDERED_SHAPES> -o <PATH_TO_OUT_TXT_FILE> --use_gpu
 ```
 
+## Pretrained Model 
+The weights of the pretrained models are downloadable [here](https://www.dropbox.com/scl/fi/ymlh4so3y0gkmfn50mm6u/weights.zip?rlkey=ivhnbrgpyzfs1o57775ast5ov&st=ns7oubjc&dl=0). 
