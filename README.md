@@ -11,6 +11,7 @@ Imperial College London
 [![arXiv](https://img.shields.io/badge/arXiv-2408.16762-b31b1b.svg)](https://arxiv.org/abs/2408.16762)
 [![Website](https://img.shields.io/website?url=http://uv3ted.github.io/?style=flat&logo=github&label=project%20page)](http://uv3ted.github.io/)
 [![Website](https://img.shields.io/website?url=https://www.dropbox.com/scl/fi/ymlh4so3y0gkmfn50mm6u/weights.zip?rlkey=ivhnbrgpyzfs1o57775ast5ov&st=ns7oubjc&dl=0?style=flat&logo=dropbox&label=pretrained%20models)](https://www.dropbox.com/scl/fi/ymlh4so3y0gkmfn50mm6u/weights.zip?rlkey=ivhnbrgpyzfs1o57775ast5ov&st=ns7oubjc&dl=0 )
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 ## Installation
 
@@ -115,3 +116,15 @@ python lpips_2dirs.py -d0 <PATH_TO_A_DIR_CONTAINING_A_SET_OF_RENDERED_SHAPES> -d
 
 ## Pretrained Model 
 The weights of the pretrained models are downloadable [here](https://www.dropbox.com/scl/fi/ymlh4so3y0gkmfn50mm6u/weights.zip?rlkey=ivhnbrgpyzfs1o57775ast5ov&st=ns7oubjc&dl=0). 
+
+## Citing This Work
+```
+@article{foti2024uv3ted,
+    title={UV-free Texture Generation with Denoising and Geodesic Heat Diffusions},
+    author={Foti, Simone and Zafeiriou, Stefanos and Birdal, Tolga},
+    journal = {Advances in Neural Information Processing Systems},
+    year={2024}
+  }
+```
+
+
