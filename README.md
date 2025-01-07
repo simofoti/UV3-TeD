@@ -119,7 +119,7 @@ The weights of the pretrained models are downloadable [here](https://www.dropbox
 
 ## Citing This Work
 ```
-@article{foti2024uv3ted,
+@inproceedings{foti2024uv3ted,
     title={UV-free Texture Generation with Denoising and Geodesic Heat Diffusions},
     author={Foti, Simone and Zafeiriou, Stefanos and Birdal, Tolga},
     journal = {Advances in Neural Information Processing Systems},
